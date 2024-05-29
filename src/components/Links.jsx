@@ -27,7 +27,7 @@ const Links = ({ isOpen, setIsOpen }) => {
 
   return (
     <div
-      className={`ease-in-out delay-150 duration-500 w-[260px] bg-white/ h-screen absolute top-0 left-0 ${
+      className={`ease-in-out delay-150 duration-500 w-[260px] bg-white/40 h-screen absolute top-0 left-0 ${
         isOpen ? "left-0" : "left-[-100%]"
       } backdrop-blur-2xl flex flex-col px-2 py-2 rounded-md  shadow-2xl `}
     >
@@ -35,7 +35,7 @@ const Links = ({ isOpen, setIsOpen }) => {
         href="/"
         className={`text-gray-300 flex items-center ${
           path === "/" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2`}
+        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
       >
         <FontAwesomeIcon icon={faHome} className="mr-2" /> Home
       </Link>
@@ -43,7 +43,7 @@ const Links = ({ isOpen, setIsOpen }) => {
         href="/about"
         className={`text-gray-300 flex items-center ${
           path === "/about" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2`}
+        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
       >
         <FontAwesomeIcon icon={faInfoCircle} className="mr-2" /> About
       </Link>
@@ -51,7 +51,7 @@ const Links = ({ isOpen, setIsOpen }) => {
         href="/academic"
         className={`text-gray-300 flex items-center ${
           path === "/academic" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2`}
+        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
       >
         <FontAwesomeIcon icon={faGraduationCap} className="mr-2" /> Academics
       </Link>
@@ -59,7 +59,7 @@ const Links = ({ isOpen, setIsOpen }) => {
         href="/gallery"
         className={`text-gray-300 flex items-center ${
           path === "/gallery" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2`}
+        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
       >
         <FontAwesomeIcon icon={faImages} className="mr-2" /> Gallery
       </Link>
@@ -67,7 +67,7 @@ const Links = ({ isOpen, setIsOpen }) => {
         href="/contact"
         className={`text-gray-300 flex items-center ${
           path === "/contact" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2`}
+        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
       >
         <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Contact
       </Link>

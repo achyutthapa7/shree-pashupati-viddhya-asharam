@@ -14,7 +14,7 @@ const Nav = () => {
     };
   }, []);
   return (
-    <div className="fixed z-20 w-full h-20 flex justify-between px-5 items-center top-0 text-white">
+    <div className="fixed z-20 w-full h-20 flex justify-between px-5 items-center top-0 text-white bg-white/">
       <div className="lg:flex md:flex hidden">left</div>
       <div className="lg:flex md:flex hidden">middle</div>
       <div className="lg:flex md:flex hidden">right</div>
