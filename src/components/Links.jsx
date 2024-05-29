@@ -28,7 +28,7 @@ const Links = ({ isOpen, setIsOpen }) => {
   return (
     <div
       className={`ease-in-out delay-150 duration-500 w-[260px] bg-white/ h-screen absolute top-0 left-0 ${
-        isOpen ? "left-0" : "-left-full"
+        isOpen ? "left-0" : "left-[-100%]"
       } backdrop-blur-2xl flex flex-col px-2 py-2 rounded-md  shadow-2xl `}
     >
       <Link
