@@ -13,6 +13,7 @@ import Link from "next/link";
 
 const Links = ({ isOpen, setIsOpen }) => {
   const path = usePathname();
+
   useEffect(() => {
     if (
       path === "/" ||
@@ -23,54 +24,67 @@ const Links = ({ isOpen, setIsOpen }) => {
     ) {
       setIsOpen(false);
     }
-  }, [path]);
+  }, [path, setIsOpen]);
 
   return (
     <div
-      className={`ease-in-out delay-150 duration-500 w-[260px] bg-white/40 h-screen absolute top-0 left-0 ${
-        isOpen ? "left-0" : "left-[-100%]"
-      } backdrop-blur-2xl flex flex-col px-2 py-2 rounded-md  shadow-2xl `}
+      className={`transition-all duration-500 w-64 bg-gray-900/90 h-screen fixed top-0 left-0 ${
+        isOpen ? "left-0" : "-left-full"
+      } backdrop-blur-lg flex flex-col px-4 py-8 z-30`}
     >
       <Link
         href="/"
-        className={`text-gray-300 flex items-center ${
-          path === "/" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
+        className={`flex items-center p-4 mb-2 rounded-lg transition-colors ${
+          path === "/"
+            ? "bg-gray-700 text-blue-400"
+            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+        }`}
       >
-        <FontAwesomeIcon icon={faHome} className="mr-2" /> Home
+        <FontAwesomeIcon icon={faHome} className="mr-3" /> Home
       </Link>
       <Link
         href="/about"
-        className={`text-gray-300 flex items-center ${
-          path === "/about" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
+        className={`flex items-center p-4 mb-2 rounded-lg transition-colors ${
+          path === "/about"
+            ? "bg-gray-700 text-blue-400"
+            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+        }`}
       >
-        <FontAwesomeIcon icon={faInfoCircle} className="mr-2" /> About
+        <FontAwesomeIcon icon={faInfoCircle} className="mr-3" /> About
       </Link>
       <Link
         href="/academic"
-        className={`text-gray-300 flex items-center ${
-          path === "/academic" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
+        className={`flex items-center p-4 mb-2 rounded-lg transition-colors ${
+          path === "/academic"
+            ? "bg-gray-700 text-blue-400"
+            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+        }`}
       >
-        <FontAwesomeIcon icon={faGraduationCap} className="mr-2" /> Academics
+        <FontAwesomeIcon icon={faGraduationCap} className="mr-3" /> Academics
       </Link>
       <Link
         href="/gallery"
-        className={`text-gray-300 flex items-center ${
-          path === "/gallery" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
+        className={`flex items-center p-4 mb-2 rounded-lg transition-colors ${
+          path === "/gallery"
+            ? "bg-gray-700 text-blue-400"
+            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+        }`}
       >
-        <FontAwesomeIcon icon={faImages} className="mr-2" /> Gallery
+        <FontAwesomeIcon icon={faImages} className="mr-3" /> Gallery
       </Link>
       <Link
         href="/contact"
-        className={`text-gray-300 flex items-center ${
-          path === "/contact" ? "bg-gray-500/25" : ""
-        } p-3 rounded-xl hover:bg-gray-500/25 m-2 text-gray-700`}
+        className={`flex items-center p-4 mb-2 rounded-lg transition-colors ${
+          path === "/contact"
+            ? "bg-gray-700 text-blue-400"
+            : "text-gray-300 hover:bg-gray-700 hover:text-white"
+        }`}
       >
-        <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Contact
+        <FontAwesomeIcon icon={faEnvelope} className="mr-3" /> Contact
       </Link>
+      <div className="mt-auto text-gray-300 text-center">
+        &copy; 2024 by Achyut Thapa
+      </div>
     </div>
   );
 };

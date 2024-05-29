@@ -1,4 +1,10 @@
+import Gallery from "@/components/Gallery";
+
 const gallery = () => {
-  return <>gallery</>;
+  return (
+    <>
+      <Gallery />
+    </>
+  );
 };
 export default gallery;

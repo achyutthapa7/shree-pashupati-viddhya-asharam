@@ -1,5 +1,8 @@
+import Academic from "@/components/Academic"
 
 const academic = ()=>{
-    return <>academic</>
+    return <>
+    <Academic/>
+    </>
 }
 export default academic

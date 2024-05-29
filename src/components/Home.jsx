@@ -1,52 +1,61 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faVolumeMute, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faVolumeMute,
+  faVolumeUp,
+  faBook,
+  faChalkboardTeacher,
+  faFutbol,
+  faUtensils,
+  faLaptop,
+  faRunning,
+} from "@fortawesome/free-solid-svg-icons";
 import video from "../assets/video.mp4";
 import Card from "./Card";
-import img9 from "../assets/9.jpg";
-import img10 from "../assets/10.jpg";
+import Footer from "./Footer";
+
 const Home = () => {
   const [isMuted, setIsMuted] = useState(true);
   const toggleMute = () => {
     setIsMuted(!isMuted);
   };
 
-  const cardDetails = [
+  const offers = [
     {
       title: "Quality Education",
-      desc: "We provide high-quality education to foster the intellectual and personal growth of our students.",
-      img: img9,
+      desc: "We provide top-notch education ensuring academic excellence.",
+      icon: faBook,
     },
     {
       title: "Skilled Teachers",
-      desc: "Our skilled teachers provide high-quality education, fostering the intellectual and personal growth of our students. ",
-      img: img10,
-    },
-    {
-      title: "Computer Lab",
-      desc: "We provide high-quality education to foster the intellectual and personal growth of our students.",
-      img: img9,
+      desc: "Our teachers are highly qualified and experienced.",
+      icon: faChalkboardTeacher,
     },
     {
       title: "Playground",
-      desc: "We provide high-quality education to foster the intellectual and personal growth of our students.",
-      img: img9,
+      desc: "A large playground for sports and recreational activities.",
+      icon: faFutbol,
     },
     {
-      title: "Quality Education",
-      desc: "We provide high-quality education to foster the intellectual and personal growth of our students.",
-      img: img9,
+      title: "Canteen",
+      desc: "Healthy and nutritious food available at our canteen.",
+      icon: faUtensils,
     },
     {
-      title: "Quality Education",
-      desc: "We provide high-quality education to foster the intellectual and personal growth of our students.",
-      img: img9,
+      title: "Computer Lab",
+      desc: "State-of-the-art computer lab with modern equipment.",
+      icon: faLaptop,
+    },
+    {
+      title: "Extra-Curricular Activities",
+      desc: "A variety of clubs and activities to foster creativity and teamwork",
+      icon: faRunning,
     },
   ];
 
   return (
-    <>
+    <section>
       <div className="sticky top-0 w-full h-screen overflow-hidden">
         <video
           src={video}
@@ -67,7 +76,7 @@ const Home = () => {
         </button>
 
         <div className="absolute top-[25%] left-[10%]">
-          <p className="text-white 2xl:text-8xl xl:text-5xl lg:text-5xl text-4xl  font-extrabold tracking-wide 2xl:leading-[100px] xl:leading-[60px] lg:leading-[60px] md:leading-[60px] leading:[50px]">
+          <p className="text-white 2xl:text-8xl xl:text-5xl lg:text-5xl text-4xl font-extrabold tracking-wide 2xl:leading-[100px] xl:leading-[60px] lg:leading-[60px] md:leading-[60px] leading-[50px]">
             ONE GOAL ONE <br />
             MISSION, OUR <br />
             CHILDREN OUR NATION.
@@ -81,21 +90,24 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div
-        className={`relative 2xl:h-screen h-auto${
-          cardDetails.length <= 3 ? "h-screen" : "h-auto"
-        } z-10 py-10 bg-gradient-to-r from-gray-50 via-gray-400 to-green-600`}
-      >
+      <div className="relative py-32 pb-10 bg-gray-100 2xl:h-screen xl:h-screen lg:h-screen h-auto px-10">
         <p className="text-2xl font-bold text-center text-gray-800 mb-10">
           What We Offer?
         </p>
-        <div className="flex flex-wrap gap-2 justify-center">
-          {cardDetails.map((c, i) => (
-            <Card key={i} title={c.title} desc={c.desc} img={c.img} />
+        <div className="flex flex-wrap gap-6 justify-center">
+          {offers.map((offer, i) => (
+            <Card
+              key={i}
+              title={offer.title}
+              desc={offer.desc}
+              icon={offer.icon}
+            />
           ))}
         </div>
       </div>
-    </>
+
+     
+    </section>
   );
 };
 
