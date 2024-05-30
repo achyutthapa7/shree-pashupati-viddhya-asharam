@@ -29,7 +29,7 @@ const Links = ({ isOpen, setIsOpen }) => {
   return (
     <div
       className={`transition-all duration-500 w-64 bg-gray-900/90 h-screen fixed top-0 left-0 ${
-        isOpen ? "left-0" : "-left-full"
+        isOpen ? "left-0" : "left-[-100%]"
       } backdrop-blur-lg flex flex-col px-4 py-8 z-30`}
     >
       <Link

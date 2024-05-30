@@ -14,6 +14,7 @@ import {
 import video from "../assets/video.mp4";
 import Card from "./Card";
 import Footer from "./Footer";
+import Link from "next/link";
 
 const Home = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -75,7 +76,7 @@ const Home = () => {
           />
         </button>
 
-        <div className="absolute top-[25%] left-[10%]">
+        <div className="absolute top-[30%] left-[10%]">
           <p className="text-white 2xl:text-8xl xl:text-5xl lg:text-5xl text-4xl font-extrabold tracking-wide 2xl:leading-[100px] xl:leading-[60px] lg:leading-[60px] md:leading-[60px] leading-[50px]">
             ONE GOAL ONE <br />
             MISSION, OUR <br />
@@ -86,7 +87,7 @@ const Home = () => {
             <br /> eius beatae illo sit delectus.
           </p>
           <button className="px-7 py-3 bg-orange-900 text-white font-thin rounded-md mt-3 tracking-widest uppercase 2xl:text-xl text-[12px]">
-            Academics
+            <Link href={"/academic"}> Academics</Link>
           </button>
         </div>
       </div>
@@ -105,8 +106,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-
-     
     </section>
   );
 };
