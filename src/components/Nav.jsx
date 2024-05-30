@@ -40,7 +40,7 @@ const Nav = () => {
       <div className="hidden md:flex space-x-8">
         <Link
           href="/"
-          className={`text-gray-300 flex items-center ${
+          className={`flex items-center ${
             path === "/" ? "bg-white/75 text-blue-700" : ""
           } p-3 rounded-xl hover:bg-white/75 hover:text-blue-700 m-2`}
         >
@@ -48,7 +48,7 @@ const Nav = () => {
         </Link>
         <Link
           href="/about"
-          className={`text-gray-300 flex items-center ${
+          className={`flex items-center ${
             path === "/about" ? "bg-white/75 text-blue-700" : ""
           } p-3 rounded-xl hover:bg-white/75 hover:text-blue-700 m-2`}
         >
@@ -56,7 +56,7 @@ const Nav = () => {
         </Link>
         <Link
           href="/academic"
-          className={`text-gray-300 flex items-center ${
+          className={`flex items-center ${
             path === "/academic" ? "bg-white/75 text-blue-700" : ""
           } p-3 rounded-xl hover:bg-white/75 hover:text-blue-700 m-2 `}
         >
@@ -64,7 +64,7 @@ const Nav = () => {
         </Link>
         <Link
           href="/gallery"
-          className={`text-gray-300 flex items-center ${
+          className={`flex items-center ${
             path === "/gallery" ? "bg-white/75 text-blue-700" : ""
           } p-3 rounded-xl hover:bg-white/75 hover:text-blue-700 m-2 `}
         >
@@ -72,7 +72,7 @@ const Nav = () => {
         </Link>
         <Link
           href="/contact"
-          className={`text-gray-300 flex items-center ${
+          className={`flex items-center ${
             path === "/contact" ? "bg-white/75 text-blue-700" : ""
           } p-3 rounded-xl hover:bg-white/75 hover:text-blue-700 m-2 `}
         >
