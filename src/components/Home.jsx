@@ -99,6 +99,7 @@ const Home = () => {
         <div className="flex-1 overflow-hidden rounded-lg ">
           <Image
             src={img3}
+            alt="image"
             className="transition ease-linear delay-100 duration-[500ms] hover:scale-125 hover:rotate-2 rounded-lg shadow-2xl"
           />
         </div>
@@ -123,7 +124,7 @@ const Home = () => {
               curriculum that includes a wide range of extracurricular
               activities.Over the years, it has grown and evolved, continually
               enhancing its educational offerings to meet the changing needs of
-              society. The school's commitment to excellence has made it a
+              society. The school&apos;s commitment to excellence has made it a
               trusted institution among the local community, fostering a
               nurturing environment that promotes lifelong learning and personal
               development.

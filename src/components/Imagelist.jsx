@@ -15,6 +15,7 @@ import img9 from "../assets/9.jpg";
 import img10 from "../assets/10.jpg";
 import img11 from "../assets/11.jpg";
 import img12 from "../assets/12.jpg";
+import Image from "next/image";
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -25,18 +26,18 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 export default function Imagelist() {
   const itemData = [
-    { img: img3, rows: 2, cols: 2 },
-    { img: img2 },
-    { img: img4 },
-    { img: img5, cols: 2 },
+    { img: img3, rows: 2, cols: 2, title: "images" },
+    { img: img2, title: "images" },
+    { img: img4, title: "images" },
+    { img: img5, cols: 2, title: "images" },
     { img: img6, cols: 2 },
-    { img: img10, rows: 2, cols: 2 },
-    { img: img12 },
+    { img: img10, rows: 2, cols: 2, title: "images" },
+    { img: img12, title: "images" },
     { img: img9 },
-    { img: img7, rows: 2, cols: 2 },
-    { img: img8 },
+    { img: img7, rows: 2, cols: 2, title: "images" },
+    { img: img8, title: "images" },
     { img: img11 },
-    { img: img1, cols: 2 },
+    { img: img1, cols: 2, title: "images" },
   ];
 
   return (
@@ -54,7 +55,7 @@ export default function Imagelist() {
           cols={item.cols || 1}
           rows={item.rows || 1}
         >
-          <img
+          <Image
             {...srcset(item.img.src, 121, item.rows, item.cols)}
             alt={item.title}
             loading="lazy"
