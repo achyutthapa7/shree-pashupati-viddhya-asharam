@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const Nav = () => {
   const path = usePathname();
+
   useEffect(() => {
     if (
       path === "/" ||
@@ -31,11 +32,28 @@ const Nav = () => {
       setIsOpen(false);
     };
   }, []);
+  const [isScroll, setIsScroll] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="absolute top-0 z-20 w-full h-20 flex justify-between px-5 items-center bg-gray-900 text-white ">
+    <nav
+      className={`top-0 z-20 w-full h-20 flex 2xl:justify-around justify-between px-5 items-center bg-gray-900 text-white ${
+        isScroll ? "fixed" : "absolute"
+      }`}
+    >
       <div className="text-2xl font-bold">
-        <a href="#">SchoolLogo</a>
+        <Link href="/">SchoolLogo</Link>
       </div>
       <div className="hidden md:flex space-x-8">
         <Link
