@@ -17,6 +17,13 @@ import Footer from "./Footer";
 import Link from "next/link";
 import Image from "next/image";
 import img3 from "../assets/3.jpg";
+import principal from "../assets/principal.jpg"; // Add the principal image
+import testimonial1 from "../assets/1.jpg"; // Add testimonial images
+import testimonial2 from "../assets/2.jpg";
+import testimonial3 from "../assets/3.jpg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -57,8 +64,39 @@ const Home = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      image: testimonial1,
+      name: "John Doe",
+      feedback:
+        "This school has provided my child with the best education. The teachers are excellent and the facilities are top-notch.",
+    },
+    {
+      image: testimonial2,
+      name: "Jane Smith",
+      feedback:
+        "A wonderful place for kids to learn and grow. The staff is very supportive and the environment is nurturing.",
+    },
+    {
+      image: testimonial3,
+      name: "Sam Wilson",
+      feedback:
+        "I highly recommend this school. It offers a perfect blend of academics and extracurricular activities.",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
   return (
-    <section>
+    <section className="">
       {/* hero section */}
       <div className="sticky top-0 w-full h-screen overflow-hidden">
         <video
@@ -70,7 +108,7 @@ const Home = () => {
         ></video>
         <button
           onClick={toggleMute}
-          className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white p-3 rounded-full flex items-center justify-center z-30"
+          className="absolute bottom-10 right-10 bg-black bg-opacity-50 text-white p-3 rounded-full flex items-center justify-center z-30"
           aria-label={isMuted ? "Unmute video" : "Mute video"}
         >
           <FontAwesomeIcon
@@ -89,13 +127,14 @@ const Home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             <br /> eius beatae illo sit delectus.
           </p>
-          <button className="px-7 py-3 bg-orange-900 text-white font-thin rounded-md mt-3 tracking-widest uppercase 2xl:text-xl text-[12px]">
+          <button className="px-7 py-3 bg-orange-900 text-white font-thin rounded-md mt-3 tracking-widest uppercase 2xl:text-xl text-[17px] hover:bg-orange-700 active:bg-orange-600">
             <Link href={"/academic"}> Academics</Link>
           </button>
         </div>
       </div>
+
       {/* short introduction */}
-      <div className="h-auto w-full bg-gray-100 relative px-7 flex lg:flex-row flex-col gap-5 py-40">
+      <div className="h-auto w-full bg-gray-100 relative px-7 flex lg:flex-row flex-col gap-5 py-40 2xl:h-screen">
         <div className="flex-1 overflow-hidden rounded-lg ">
           <Image
             src={img3}
@@ -139,17 +178,67 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-white w-full h-[250px]"></div>
+      {/* Placeholder div */}
+      <div className="bg-transparent w-full h-[250px] backdrop-blur-sm"></div>
 
-      {/* word from principal */}
-      <div className="relative bg-white w-full h-screen">hello</div>
+      {/* Word from Principal */}
+      <div className="relative bg-white w-full h-auto flex flex-col items-center justify-center py-32">
+        <div className="text-center max-w-2xl px-4">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+            Word from Principal
+          </h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Welcome to Shree Pashupati Viddhya Asharam. Our goal is to foster a
+            nurturing environment that promotes academic excellence and
+            character development. We are committed to providing a comprehensive
+            education that prepares our students for future success.
+          </p>
+          <Image
+            src={principal}
+            alt="Principal Image"
+            className="transition ease-in-out duration-500 rounded-full mx-auto mb-4 hover:scale-105 shadow-2xl"
+            width={150}
+            height={150}
+          />
+          <p className="text-gray-700 italic">- Keshav Thapa</p>
+        </div>
+      </div>
 
       {/* testimonial */}
-      <div className="relative bg-gray-100 w-full h-screen">testimonial</div>
+      <div className="relative bg-gray-100 w-full py-32 overflow-x-hidden">
+        <div className="text-center mb-10">
+          <h2 className="text-lg text-gray-900">Testimonials</h2>
+          <p className=" text-gray-700 text-3xl font-extrabold">
+            What our students and parents say
+          </p>
+        </div>
+        <Slider {...settings} className="max-w-3xl mx-auto px-4">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-lg text-center"
+            >
+              <Image
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="transition ease-in-out duration-500 rounded-full mx-auto mb-4 hover:scale-105 shadow-2xl"
+                width={200}
+                height={200}
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                {testimonial.name}
+              </h3>
+              <p className="text-gray-700">{testimonial.feedback}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
+      {/* Placeholder div */}
+      <div className="bg-transparent backdrop-blur-sm w-full h-[250pxm"></div>
 
       {/* offerings */}
-      <div className="relative py-10 pb-10 bg-gray-100 2xl:h-screen xl:h-screen lg:h-screen h-auto px-10">
-        <p className="text-2xl font-bold text-center text-gray-800 mb-10">
+      <div className="relative py-16 bg-gray-100 h-auto 2xl:h-screen xl:h-screen px-10">
+        <p className="text-3xl font-bold text-center text-gray-800 mb-10">
           What We Offer?
         </p>
         <div className="flex flex-wrap gap-6 justify-center">

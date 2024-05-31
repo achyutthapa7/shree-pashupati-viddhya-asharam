@@ -57,8 +57,10 @@ export default function Imagelist() {
         >
           <Image
             {...srcset(item.img.src, 121, item.rows, item.cols)}
-            alt={item.title}
+            alt={item.title || "images"}
             loading="lazy"
+            layout="fill"
+            objectFit="cover"
           />
         </ImageListItem>
       ))}
