@@ -234,7 +234,7 @@ const Home = () => {
         </Slider>
       </div>
       {/* Placeholder div */}
-      <div className="bg-transparent backdrop-blur-sm w-full h-[250pxm"></div>
+      <div className="bg-transparent backdrop-blur-sm w-full h-[250px]"></div>
 
       {/* offerings */}
       <div className="relative py-16 bg-gray-100 h-auto 2xl:h-screen xl:h-screen px-10">
