@@ -19,5 +19,15 @@ body {
 }
 
 .transition {
-  transition: all linear 700ms;
+  transition: all linear 500ms;
+}
+.quote::before {
+  content: "“";
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  font-size: 75px;
+  color: yellowgreen;
+  font-family: "Georgia", serif;
+  font-style: italic;
 }

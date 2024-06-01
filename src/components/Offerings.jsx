@@ -6,7 +6,7 @@ export default function Offerings({ offers }) {
       <p className="text-3xl font-bold text-center text-gray-800 mb-10">
         What We Offer?
       </p>
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="flex flex-wrap gap-6 justify-center 2xl:px-[800px]">
         {offers.map((offer, i) => (
           <Card
             key={i}

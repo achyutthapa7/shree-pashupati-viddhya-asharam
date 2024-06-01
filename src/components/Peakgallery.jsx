@@ -6,7 +6,7 @@ export default function Peakgallery({ img }) {
       <Image
         src={img}
         alt="image"
-        className=" transition h-full w-full object-cover rounded-lg hover:rounded-none hover:scale-125 hover:rotate-3"
+        className=" transition h-full w-full object-cover rounded-lg hover:rounded-none hover:scale-[0.8] hover:rotate-6"
       />
     </div>
   );

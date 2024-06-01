@@ -16,9 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import img3 from "../assets/3.jpg";
 import principal from "../assets/principal.jpg"; // Add the principal image
-import testimonial1 from "../assets/1.jpg"; // Add testimonial images
-import testimonial2 from "../assets/2.jpg";
-import testimonial3 from "../assets/3.jpg";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Herosection from "./Herosection";
@@ -27,11 +25,12 @@ import Wordfromprincipal from "./Wordfromprincipal";
 import Testimonial from "./Testimonial";
 import Offerings from "./Offerings";
 import Backdrop from "./Backdrop";
-import img1 from "../assets/1.jpg";
-import img2 from "../assets/2.jpg";
-import img6 from "../assets/6.jpg";
-import img4 from "../assets/4.jpg";
-import img5 from "../assets/5.jpg";
+import gallery1 from "../assets/gallery/1.jpg";
+import gallery2 from "../assets/gallery/2.jpg";
+import gallery3 from "../assets/gallery/3.jpg";
+import gallery4 from "../assets/gallery/4.jpg";
+import gallery5 from "../assets/gallery/5.jpg";
+import gallery6 from "../assets/gallery/6.jpg";
 import Peakgallery from "./Peakgallery";
 import Link from "next/link";
 
@@ -74,26 +73,7 @@ const Home = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      image: testimonial1,
-      name: "John Doe",
-      feedback:
-        "This school has provided my child with the best education. The teachers are excellent and the facilities are top-notch.",
-    },
-    {
-      image: testimonial2,
-      name: "Jane Smith",
-      feedback:
-        "A wonderful place for kids to learn and grow. The staff is very supportive and the environment is nurturing.",
-    },
-    {
-      image: testimonial3,
-      name: "Sam Wilson",
-      feedback:
-        "I highly recommend this school. It offers a perfect blend of academics and extracurricular activities.",
-    },
-  ];
+  
 
   const settings = {
     dots: true,
@@ -105,7 +85,7 @@ const Home = () => {
     autoplaySpeed: 3000,
   };
 
-  const images = [img1, img2, img6, img4, img5, img4, img5, img5];
+  const images = [gallery3, gallery2, gallery1, gallery4, gallery5, gallery6];
   return (
     <section className="">
       <Herosection
@@ -118,7 +98,7 @@ const Home = () => {
       <Shortintro img3={img3} />
       <Backdrop />
       <Wordfromprincipal principal={principal} />
-      <Testimonial testimonials={testimonials} settings={settings} />
+      <Testimonial />
       <Backdrop />
       <Offerings offers={offers} />
 
@@ -147,3 +127,4 @@ const Home = () => {
 };
 
 export default Home;
+// testimonials={testimonials} settings={settings}
