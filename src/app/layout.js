@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
             {isScroll && (
               <FontAwesomeIcon
                 icon={faArrowUp}
-                className="bg-black/35 text-white fixed bottom-10 right-10 cursor-pointer rounded-full w-8 h-8 p-3 hover:bg-black/60"
+                className="bg-black/35 text-white fixed bottom-5 right-5 cursor-pointer rounded-full w-8 h-8 md:p-3 p-1 2xl:p-5 hover:bg-black/60 2xl:w-10 2xl:h-10"
                 onClick={handleScrollToTop}
               />
             )}

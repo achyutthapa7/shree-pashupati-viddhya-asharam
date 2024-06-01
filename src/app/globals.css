@@ -17,3 +17,7 @@ body {
   background-color: gray;
   bottom: -20px;
 }
+
+.transition {
+  transition: all linear 700ms;
+}
