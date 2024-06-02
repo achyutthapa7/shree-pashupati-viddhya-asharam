@@ -75,7 +75,7 @@ export default function Testimonial() {
       <p className="text-3xl font-bold text-center text-gray-800 mb-10">
         What People Say?
       </p>
-      <div className="w-full h-auto flex justify-center items-center flex-wrap gap-5 3xl:px-[700px] 2xl:px-[700px]">
+      <div className="w-full h-auto flex justify-center items-center flex-wrap gap-5">
         {currentTestimonials.map((item, index) => (
           <Testimonialcard
             key={index}

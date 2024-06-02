@@ -19,7 +19,7 @@ body {
 }
 
 .transition {
-  transition: all linear 500ms;
+  transition: all linear 700ms;
 }
 .quote::before {
   content: "“";

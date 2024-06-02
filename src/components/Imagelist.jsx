@@ -16,9 +16,7 @@ import img10 from "../assets/10.jpg";
 import img11 from "../assets/11.jpg";
 import img12 from "../assets/12.jpg";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
-;
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,

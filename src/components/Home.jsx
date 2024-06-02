@@ -33,6 +33,7 @@ import gallery5 from "../assets/gallery/5.jpg";
 import gallery6 from "../assets/gallery/6.jpg";
 import Peakgallery from "./Peakgallery";
 import Link from "next/link";
+import Image from "next/image";
 
 const Home = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -73,8 +74,6 @@ const Home = () => {
     },
   ];
 
-  
-
   const settings = {
     dots: true,
     infinite: true,
@@ -102,8 +101,8 @@ const Home = () => {
       <Backdrop />
       <Offerings offers={offers} />
 
-      {/* peak of our gallery */}
-      <div className="relative  w-full xl:h-screen h-auto bg-white py-20 hidden lg:block">
+      {/* peak of our gallery for large screen*/}
+      <div className="relative  w-full xl:h-screen h-auto bg-white py-20 hidden lg:block md:block">
         <p className="text-3xl font-bold text-center text-gray-800 mb-10">
           Our Gallery
         </p>
@@ -122,9 +121,85 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* peak of our gallery for small screen*/}
+      <div className="relative lg:hidden md:hidden block w-full h-auto bg-white py-10">
+        <p className="text-3xl font-bold text-center text-gray-800 mb-10 w-full">
+          Our Gallery
+        </p>
+        <Link href={"/gallery"}>
+          <FontAwesomeIcon
+            icon={faArrowRight}
+            className="absolute right-10 top-[50px] text-[25px]"
+          />
+        </Link>
+
+        <div class="h-auto grid grid-cols-4 grid-rows-4 gap-2 p-2">
+          <div class="col-span-2 row-span-2 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery1}
+              alt="Large Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+
+          <div class="col-span-1 row-span-2 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery2}
+              alt="Medium Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+
+          <div class="col-span-1 row-span-1 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery3}
+              alt="Small Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+
+          <div class="col-span-1 row-span-1 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery4}
+              alt="Small Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+
+          <div class="col-span-2 row-span-2 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery5}
+              alt="Medium Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+          <div class="col-span-1 row-span-1 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery1}
+              alt="Small Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+
+          <div class="col-span-1 row-span-1 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery3}
+              alt="Small Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+
+          <div class="col-span-2 row-span-1 overflow-hidden flex items-center justify-center">
+            <Image
+              src={gallery1}
+              alt="Small Image"
+              className=" rounded-xl w-full h-full object-cover hover:scale-110 transition hover:rotate-3"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
 
 export default Home;
-// testimonials={testimonials} settings={settings}
