@@ -19,12 +19,12 @@ export default function Herosection({
       ></video>
       <button
         onClick={toggleMute}
-        className="absolute md:bottom-10 md:right-10 bottom-2 right-2 bg-black bg-opacity-50 text-white md:p-3 2xl:p-5 p-2 rounded-full flex items-center justify-center z-30"
+        className="absolute bottom-[6rem] right-5 bg-black bg-opacity-50 text-white md:p-3 2xl:p-5 p-3 rounded-full flex items-center justify-center z-30"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
       >
         <FontAwesomeIcon
           icon={isMuted ? faVolumeMute : faVolumeUp}
-          className="lg:text-[25px] md:text-[20px] text-[17px] 2xl:text-[50px]"
+          className="lg:text-[25px] md:text-[20px] text-[19px] 2xl:text-[50px]"
         />
       </button>
 
