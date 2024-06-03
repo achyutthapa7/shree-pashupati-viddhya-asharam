@@ -84,7 +84,7 @@ const Home = () => {
     autoplaySpeed: 3000,
   };
 
-  const images = [gallery3, gallery2, gallery1, gallery4, gallery5, gallery6];
+  const images = [gallery3, gallery2, gallery1, gallery4];
   return (
     <section className="">
       <Herosection

@@ -1,18 +1,26 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-
+import gallery1 from "../assets/gallery/1.jpg";
+import gallery2 from "../assets/gallery/2.jpg";
+import gallery3 from "../assets/gallery/3.jpg";
+import gallery4 from "../assets/gallery/4.jpg";
+import gallery5 from "../assets/gallery/5.jpg";
+import gallery6 from "../assets/gallery/6.jpg";
+import gallery7 from "../assets/gallery/7.jpg";
+import gallery9 from "../assets/gallery/9.jpg";
+import gallery10 from "../assets/gallery/10.jpg";
 const Gallery = () => {
   const images = [
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery9,
+    gallery10,
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);
