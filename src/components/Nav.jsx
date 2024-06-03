@@ -48,9 +48,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`top-0 z-20 w-full h-20 flex 2xl:justify-around justify-between px-5 items-center bg-gray-900 text-white ${
-        isScroll ? "fixed" : "absolute"
-      }`}
+      className={`transition top-0 z-20 w-full h-20 flex 2xl:justify-around justify-between px-5 items-center bg-gray-900 text-white sticky`}
     >
       <div className="text-2xl font-bold">
         <Link href="/">SchoolLogo</Link>
