@@ -7,7 +7,8 @@ import Loading from "../../src/components/Loading";
 import Footer from "@/components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-
+import Head from "next/head";
+import Link from "next/link";
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isScroll, setIsScroll] = useState(false);
@@ -43,6 +44,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Shree Pashupati Viddhya Asharam</title>
+        <Link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/<generated>"
+          sizes="any"
+        />
       </head>
       <body className="relative">
         {isLoading && <Loading />}
