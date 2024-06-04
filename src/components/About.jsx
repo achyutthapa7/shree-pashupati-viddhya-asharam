@@ -62,7 +62,7 @@ const About = () => {
   ];
 
   return (
-    <div className="px-6 py-28">
+    <div className="px-6 py-20">
       <div className="max-w-6xl mx-auto xl:px-20 lg:px-20 px-0">
         <h1 className="text-lg md:text-2xl lg:text-3xl font-thin mb-8">
           Introduction

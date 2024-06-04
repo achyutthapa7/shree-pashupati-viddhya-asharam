@@ -51,9 +51,9 @@ const Nav = () => {
       className={`transition top-0 z-20 w-full h-20 flex 2xl:justify-around justify-between px-5 items-center bg-gray-900 text-white sticky`}
     >
       <div className="text-2xl font-bold">
-        <Link href="/">SchoolLogo</Link>
+        <Link href="/">S.P.V.A</Link>
       </div>
-      <div className="hidden md:flex space-x-8">
+      <div className="hidden lg:flex space-x-8">
         <Link
           href="/"
           className={`flex items-center ${
@@ -70,14 +70,14 @@ const Nav = () => {
         >
           About
         </Link>
-        <Link
+        {/* <Link
           href="/academic"
           className={`flex items-center ${
             path === "/academic" ? "bg-white/75 text-blue-700" : ""
           } p-3 rounded-xl hover:bg-white/75 hover:text-blue-700 m-2 `}
         >
           Academics
-        </Link>
+        </Link> */}
         <Link
           href="/gallery"
           className={`flex items-center ${
@@ -95,7 +95,7 @@ const Nav = () => {
           Contact
         </Link>
       </div>
-      <div className="md:hidden flex">
+      <div className="lg:hidden flex">
         <Links isOpen={isOpen} setIsOpen={setIsOpen} />
         <button onClick={handleClick} className="fixed top-7 right-8">
           <FontAwesomeIcon

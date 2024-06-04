@@ -52,7 +52,7 @@ const Links = ({ isOpen, setIsOpen }) => {
       >
         <FontAwesomeIcon icon={faInfoCircle} className="mr-3" /> About
       </Link>
-      <Link
+      {/* <Link
         href="/academic"
         className={`flex items-center p-4 mb-2 rounded-lg transition-colors ${
           path === "/academic"
@@ -61,7 +61,7 @@ const Links = ({ isOpen, setIsOpen }) => {
         }`}
       >
         <FontAwesomeIcon icon={faGraduationCap} className="mr-3" /> Academics
-      </Link>
+      </Link> */}
       <Link
         href="/gallery"
         className={`flex items-center p-4 mb-2 rounded-lg transition-colors ${
